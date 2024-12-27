@@ -1,11 +1,11 @@
 import './sass/application.scss'
-import MainContent from './components/MainContent'
+import Content from './components/Content'
 
 function App() {
 
   return (
     <>
-      <MainContent />
+      <Content />
     </>
   )
 }

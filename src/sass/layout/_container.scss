@@ -1,8 +1,22 @@
 @use '../mixins' as *;
 
 .container {
-    display: grid;
-    grid-template-columns: 0.4fr 0.8fr;
+
+    // @include media(desktop) {
+    //     width: 100%;
+    //     // max-width: 1024px;
+    //     margin: 0 auto;
+    // }
+    // @include media(tablet) {
+    //     width: 100%;
+    //     // max-width: 768px;
+    //     margin: 0 auto;
+    // }
+    // @include media(mobile) {
+    //     width: 100%;
+    //     // max-width: 100%;
+    //     margin: 0 auto;
+    // }
 }
 
 .dark-overlay {

@@ -1,0 +1,236 @@
+@use '../mixins' as *;
+
+.carousel {
+    width: 100vw;
+    height: 100vh;
+    margin-top: -100px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel .list .item {
+    position: absolute;
+    inset: 0 0 0 0;
+    .project-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.2);  
+    }
+    .content {
+        position: absolute;
+        top: 20%;
+        width: 1024px;
+        max-width: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+        box-sizing: border-box;
+        
+    
+        .project-id {
+            font-size: var(--font-size-xxl);
+            // color: var(--color-secondary);
+            // color: var(--color-primary);
+        }
+    
+        .project-name {
+            font-size: var(--font-size-xxxxxl);
+            color: var(--color-primary-rotate);
+            color: var(--color-secondary);
+            font-weight: bold;
+            margin-bottom: var(--space-m);
+            text-shadow: var(--shadow-text);
+        }
+        .project-description {
+            font-size: var(--font-size-xl);
+            color: #eee;
+            text-shadow: var(--shadow-text);
+            // font-family: 'Dancing Script';
+            // letter-spacing: 2px;
+        }
+    
+        .project-tech {
+            display: flex;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            gap: 5px;
+    
+            .tech-icon {
+                width: 30px;
+                height: 30px;
+                filter: brightness(1.2);
+            }
+        }
+    
+        .links {
+            display: grid;
+            grid-template-columns: repeat(2, 130px);
+            grid-template-rows: 40px;
+            gap: 10px;
+            margin-top: 20px;
+            text-align: center;
+            align-items: center;
+            font-size: var(--font-size-xl);
+            font-family: 'Roboto';
+
+            .project-link {
+                // border: 1px solid #eee;
+                border-radius: 5px;
+                background-color: #eee;
+                padding: 5px;
+                letter-spacing: 3px;
+                color: #333;
+                cursor: pointer;
+            }
+            .project-link:hover {
+                background: linear-gradient(to bottom, var(--color-primary-rotate), var(--color-primary));
+                color: #eee;
+            }
+        }
+    }
+}
+
+/* arrow */
+.arrow {
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+
+    button {
+        width: 80px;
+        height: 80px;
+        border-radius: var(--border-round);
+        background-color: var(--color-white);
+        border: none;
+        font-family: monospace;
+        font-weight: bold;
+        font-size: var(--font-size-xxxxl);
+        color: var(--color-dark);
+        transition: .5s;
+        z-index: 100;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        border-radius: var(--border-round);
+        background: linear-gradient(to bottom, var(--color-primary-rotate), var(--color-primary));
+        color: var(--color-white    );
+    }
+}
+
+/* active carousel */
+.carousel .list .item:nth-child(1) {
+    z-index: 1;
+
+    .project-name,
+    .project-id,
+    .project-description,
+    .project-tech,
+    .links {
+        transform: translateY(50px);
+        filter: blur(20px);
+        opacity: 0;
+        animation: showContent 0.5s 1s linear 1 forwards; 
+    }  
+
+    .project-id { animation-delay: 0.7s; }
+    .project-name { animation-delay: 1s; }
+    .project-description { animation-delay: 1.3s; } 
+    .project-tech { animation-delay: 1.3s; }
+    .links { animation-delay: 1.5s; }
+
+}
+
+
+/** Click next button effect */
+// Appears the image is expanding from the thumbnail to whole screen
+.carousel.next .list .item:nth-child(1) {
+    .project-image {
+        width: 300px;
+        height: 200px;
+        position: absolute;
+        left: 50%;
+        bottom: 50px;
+        border-radius: var(--border-radius);
+        animation: showImage 0.5s linear 1 forwards;
+    }
+}
+/** Effect for previous button */
+.carousel.prev .list .item:nth-child(2) {
+    z-index: 2;
+
+    .project-image {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        animation: outImage 0.5s linear 1 forwards;
+    }
+
+    .links, .project-tech, .project-description, .project-name, .project-id {
+        animation: contentOut 0.5s 0.5s linear 1 forwards;
+    }
+    
+}
+
+.carousel.next .arrow button,
+.carousel.prev .arrow button {
+    pointer-events: none;
+}
+
+/* time */
+
+.time {
+    width: 0%;
+    height: 5px;
+    background-color: var(--color-primary);
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+
+}
+
+.carousel.next .time ,
+.carousel.prev .time {
+    width: 0;
+    animation: timeRunning 2s linear 1 forwards;
+}
+
+
+// Media query
+@media screen and (max-width: 678px) {
+    .carousel .list .item .content {
+        padding-right: 0;
+        top: 10%;
+
+        .project-id {
+            font-size: var(--font-size-xl);
+        }
+        .project-name {
+            font-size: var(--font-size-xxxl);
+        }
+        .project-description {
+            font-size: var(--font-size-m);
+        }
+        .project-tech {
+            padding-bottom: 5px;
+            .tech-icon {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    .arrow {
+        padding-right: 10px;
+
+        button {
+            width: 50px;
+            height: 50px;
+        }
+    }
+}

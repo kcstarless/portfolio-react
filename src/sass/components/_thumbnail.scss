@@ -1,0 +1,93 @@
+@use '../mixins' as *;
+
+/* thumbnail */
+.thumbnail {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 30px;
+
+    .item {
+        width: 300px;
+        height: 200px;
+        flex-shrink: 0;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 100%;
+            // object-fit: cover;
+            // object-position: center;
+            border-radius: var(--border-radius);
+        }
+        .project-name {
+            font-size: var(--font-size-xl);
+            color: var(--color-secondary);
+            position: absolute;
+            top: -35px;
+        }
+    }
+}
+
+// Thumbnail active animation
+.carousel.next .thumbnail .item:nth-last-child(1) {
+    width: 0;
+    overflow: hidden;
+    animation: showThumbnail 0.5s linear 1 forwards;
+}
+// Moves the thumnail to left when next button is clicked
+.carousel.next .thumbnail {
+    transform: translateX(150px);
+    animation: transformThumbnail 0.5s linear 1 forwards;
+}
+// Moves active project back to the first slot in thumbnail
+.carousel.prev .thumbnail .item:nth-child(1) {
+    width: 0;
+    overflow: hidden;
+    animation: showThumbnail 0.5s linear 1 forwards;
+}
+
+// Media query
+@media screen and (max-width: 678px) {
+    .carousel .thumbnail {
+        bottom: 50px;
+    }
+    .carousel .thumbnail .item {
+        width:  150px;
+        height: 100px; 
+    }
+
+    .carousel .thumbnail .item {
+        .project-name {
+            font-size: var(--font-size-m);
+            top: -25px;
+        }
+    }
+    .arrow {
+        top: 85%;
+    }
+
+    @keyframes showThumbnail {
+        to {
+            width:  150px;
+            height: 100px; 
+        }
+    }
+
+    @keyframes outImage {
+        from {
+            filter: brightness(0.2);
+        }
+        to {
+            filter: brightness(1);
+            width:  150px;
+            height: 100px; 
+            border-radius: var(--border-radius);
+            left: 50%;
+            bottom: 50px;
+        }
+    }
+}

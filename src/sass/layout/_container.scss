@@ -25,7 +25,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.2);  // Dark semi-transparent overlay
+    background-color: rgba(0, 0, 0, 0.5);  // Dark semi-transparent overlay
     z-index: 1;  // Ensures it's above other content
     height: 100vh;
 }
@@ -35,7 +35,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);  // Dark semi-transparent overlay
+    background-color: rgba(0, 0, 0, 0.8);  // Dark semi-transparent overlay
     z-index: 1;  // Ensures it's above other content
 }
 

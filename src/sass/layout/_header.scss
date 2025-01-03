@@ -14,28 +14,46 @@ header {
 }
 
 header a {
-    margin-right: 40px;
+    // margin-right: 40px
     color: var(--color-text-white);
 }
 
 .title {
-    .portfolio-link {
-        display: inline-flex;
-        align-items: end;
-        margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-around;
+    margin-top: 30px;
+    height: 80px;
+    width: auto;
+    font-size: var(--font-size-xl);
+    background: linear-gradient(to bottom, var(--color-primary-rotate), var(--color-primary));
+    color: var(--color-white);
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: var(--border-radius);
+
+    font-family: var(--font-family-sans);
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent 0.5s 1s linear 1 forwards; 
+
+    .email-link {
+        filter: brightness(0.95);
+    }
+    .email-link:hover {
         cursor: pointer;
-        font-size: var(--font-size-xl);
-        background: linear-gradient(to bottom, var(--color-primary-rotate), var(--color-primary));
-        color: var(--color-white);
-        padding-left: 10px;
-        padding-right: 10px;
-        border-radius: var(--border-radius);
-        height: 80px;
-        border: none;
-        font-family: var(--font-family-sans);
-        transform: translateY(50px);
-        filter: blur(20px);
-        opacity: 0;
-        animation: showContent 0.5s 1s linear 1 forwards; 
+        filter: brightness(1.2)
+    }
+}
+
+@media screen and (max-width: 678px) {
+    .title {
+        margin-top: -20px;
+        height: 60px;
+        font-size: var(--font-size-m);
+        padding-left: 5px;
+        padding-right: 5px;
     }
 }

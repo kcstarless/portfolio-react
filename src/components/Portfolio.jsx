@@ -39,8 +39,8 @@ const Portfolio = () => {
             <CarouselActive sliderRef={sliderRef} />
             <CarouselThumbnail thumbnailRef={thumbnailRef} />
             <div className="arrow">
-                <button id="prev" className="prev" onClick={handlePrevClick}>{'↓'}</button>
-                <button id="next" className="next" onClick={handleNextClick}>{'↑'}</button>
+                <button id="prev" className="prev" onClick={handlePrevClick}>&#x25BE;</button>
+                <button id="next" className="next" onClick={handleNextClick}>&#x25B4;</button>
             </div>
             <div className="time"></div>
         </div>

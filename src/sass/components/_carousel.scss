@@ -223,14 +223,46 @@
                 height: 20px;
             }
         }
+        .links {
+            display: grid;
+            grid-template-columns: repeat(2, 100px);
+            grid-template-rows: 30px;
+            gap: 10px;
+            margin-top: 20px;
+            text-align: center;
+            align-items: center;
+            font-size: var(--font-size-l);
+            font-family: 'Roboto';
+
+            .project-link {
+                // border: 1px solid #eee;
+                border-radius: 5px;
+                background-color: #eee;
+                padding: 5px;
+                letter-spacing: 3px;
+                color: #333;
+                cursor: pointer;
+            }
+            .project-link:hover {
+                background: linear-gradient(to bottom, var(--color-primary-rotate), var(--color-primary));
+                color: #eee;
+            }
+        }
     }
 
     .arrow {
+        position: absolute;
+        top: 80%;
+        right: 52%;
+        width: 300px;
+        max-width: 30%;
+        display: flex;
+        gap: 10px;
         padding-right: 10px;
 
         button {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
         }
     }
 }

@@ -71,7 +71,7 @@
             text-align: center;
             align-items: center;
             font-size: var(--font-size-xl);
-            font-family: 'Roboto';
+            font-weight: bold;
 
             .project-link {
                 // border: 1px solid #eee;
@@ -208,6 +208,7 @@
         top: 10%;
 
         .project-id {
+            padding-top: 20px;
             font-size: var(--font-size-xl);
         }
         .project-name {
@@ -232,7 +233,8 @@
             text-align: center;
             align-items: center;
             font-size: var(--font-size-l);
-            font-family: 'Roboto';
+            font-weight: bold;
+            // font-family: 'Roboto';
 
             .project-link {
                 // border: 1px solid #eee;

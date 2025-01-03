@@ -44,7 +44,7 @@ const projects = () => {
             github_link: "https://github.com/kcstarless/battleship",
             image: imageBattleship,
             thumb: thumbBattleship,
-            description: "The Battleship project is a JavaScript-based game that recreates the classic board game Battleship. Players can place their ships on a grid and take turns firing missiles at the opponent's grid to sink their ships. The game features a responsive design, intuitive controls, and a dynamic interface that updates in real-time. The project demonstrates the use of object-oriented programming principles, event handling, and DOM manipulation to create an engaging and interactive gaming experience."
+            description: "The Battleship project is a JavaScript game that recreates the classic Battleship board game. Players place ships on a grid and take turns firing missiles to sink each other's ships. It features a responsive design, real-time updates, and showcases object-oriented programming, event handling, and DOM manipulation."
         }, 
         
         {
@@ -54,7 +54,7 @@ const projects = () => {
             github_link: "https://theodinbook.fly.dev",
             image: imageOdinbook,
             thumb: thumbOdinbook,
-            description: "Odinbook is a social media application built with Ruby on Rails, designed to showcase the integration of data and backend technologies. The app enables users to view profiles, create and interact with posts through comments, follows, and likes. Authentication is securely managed using OmniAuth and Devise. Odinbook also leverages Active Record for database interactions, Turbo for efficient page updates, Stimulus for dynamic user interfaces, and Mailer for notifications. The application's overall design is crafted using SASS, ensuring a modern and responsive user experience.",
+            description: "Odinbook is a Ruby on Rails social media app that allows users to view profiles, create posts, and interact through comments, follows, and likes. It uses OmniAuth and Devise for authentication, Active Record for database interactions, and Turbo and Stimulus for dynamic UI updates. Mailer handles notifications, and SASS ensures a modern, responsive design.",
         },
 
         {

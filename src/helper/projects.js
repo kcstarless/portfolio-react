@@ -34,7 +34,7 @@ const projects = () => {
             github_link: "https://github.com/kcstarless/weather-app",
             image: imageWeather,
             thumb: thumbUmbrella,
-            description: "The Weather Umbrella project is a JavaScript-based application that leverages the Visual Crossing API to fetch and display real-time weather data. The project utilizes async functions to handle API calls efficiently and processes the returned JSON data to present weather information. Developed using a bottom-up approach, the project focuses on building small, reusable components that come together to create a robust and scalable weather forecasting tool."
+            description: "The Weather Umbrella project is a JavaScript app that uses the Visual Crossing API to display real-time weather data. It employs async functions for efficient API calls and processes JSON data to show weather forecasts. The app is built with reusable components for scalability and robustness."
         },
 
         {

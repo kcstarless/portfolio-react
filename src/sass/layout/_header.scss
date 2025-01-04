@@ -40,11 +40,23 @@ header a {
     animation: showContent 0.5s 1s linear 1 forwards; 
 
     .email-link {
-        filter: brightness(0.95);
-    }
-    .email-link:hover {
+        display: flex;;
         cursor: pointer;
-        filter: brightness(1.2)
+        .email {
+            filter: brightness(0.1);
+        }
+        .email:hover {
+            filter: brightness(1.2);
+        }
+        .copy {
+            filter: brightness(0.1);
+        }
+        .copy:hover {
+            filter: brightness(1.2);
+        }
+        .copy-feedback {
+            font-size: var(--font-size-xxs);
+        }
     }
 }
 

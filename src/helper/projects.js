@@ -23,6 +23,22 @@ import iconHtml from '../assets/icons/HTML5.svg';
 import iconCss from '../assets/icons/CSS3.svg';
 import iconJs from '../assets/icons/JavaScript.svg';
 import iconRedux from '../assets/icons/Redux.svg';
+import iconMui from '../assets/icons/Mui.svg';
+
+
+const techStack = {
+    React: { icon: iconReact, name: "React" },
+    Ruby: { icon: iconRuby, name: "Ruby" },
+    Rails: { icon: iconRails, name: "Rails" },
+    Postgres: { icon: iconPostgres, name: "Postgres" },
+    Webpack: { icon: iconWebpack, name: "Webpack" },
+    Sass: { icon: iconSass, name: "SASS" },
+    Html: { icon: iconHtml, name: "HTML" },
+    Css: { icon: iconCss, name: "CSS" },
+    Js: { icon: iconJs, name: "JavaScript" },
+    Redux: { icon: iconRedux, name: "Redux" },
+    Mui: { icon: iconMui, name: "Material UI" }, 
+}
 
 
 //** Project file containing all the projects and it's details */
@@ -30,7 +46,7 @@ import iconRedux from '../assets/icons/Redux.svg';
 const projects = () => {
     return [
         {   id: 1 , name: "Umbrella", short: "Weather Forecasting Tool",
-            tech_stack: [iconHtml, iconCss, iconSass, iconJs, iconWebpack], 
+            tech_stack: [techStack.React, techStack.Js, techStack.Html, techStack.Css, techStack.Sass],
             site_link: "https://kcstarless.github.io/weather-app/", 
             github_link: "https://github.com/kcstarless/weather-app",
             image: imageWeather,
@@ -40,7 +56,7 @@ const projects = () => {
 
         {
             id: 2, name: "Battleship", short: "Classic Board Game",
-            tech_stack: [iconHtml, iconCss, iconSass, iconJs, iconWebpack],
+            tech_stack: [techStack.Js, techStack.Html, techStack.Css],
             site_link: "https://kcstarless.github.io/battleship/",
             github_link: "https://github.com/kcstarless/battleship",
             image: imageBattleship,
@@ -50,7 +66,7 @@ const projects = () => {
         
         {
             id: 3, name: "Odinbook", short: "Social Media App",
-            tech_stack: [iconRuby, iconRails, iconPostgres, iconSass, iconJs, iconCss, iconHtml],
+            tech_stack: [techStack.Ruby, techStack.Rails, techStack.Postgres, techStack.Sass],
             site_link: "https://theodinbook.fly.dev",
             github_link: "https://theodinbook.fly.dev",
             image: imageOdinbook,
@@ -59,18 +75,8 @@ const projects = () => {
         },
 
         {
-            id: 4, name: "Pokemon", short: "Memory Game",
-            tech_stack: [iconReact, iconSass, iconJs, iconCss, iconHtml, iconRedux],
-            site_link: "https://pokemon-theta-eosin.vercel.app/",
-            github_link: "https://github.com/kcstarless/pokemon",
-            image: imagePokemon,
-            thumb: thumbPokemon,
-            description: "React based browser game. The game tests players memory by randomly shuffling Pokemon card and asking them to click on each one only once. The game keeps track of the player's current and best score. The project demonstrates the use of React components, state management, event handling and CSS to create an interactive and engaging user experience."
-        },
-        
-        {
-            id: 5, name: "Flyaway", short: "Flight Search Engine",
-            tech_stack: [iconRuby, iconRails, iconReact, iconPostgres, iconSass, iconJs, iconCss, iconHtml],
+            id: 4, name: "Flyaway", short: "Flight Search Engine",
+            tech_stack: [techStack.Ruby, techStack.Rails, techStack.React, techStack.Postgres, techStack.Sass, techStack.Js, techStack.Css, techStack.Html, techStack.Mui],
             site_link: "https://flyaway-rails-react.fly.dev/",
             github_link: "https://github.com/kcstarless/theodinbook",
             image: imageFlyaway,
@@ -78,6 +84,15 @@ const projects = () => {
             description: "Inspired by Skyscanner and Google flight search, Flyaway is a flight search engine that allows users to search for flights based on their departure and destination cities. The app uses the Amadeus API to fetch flight data and displays the results in a user-friendly format. Users can filter flights by price, airline, and departure time, and view detailed information about each flight. Flyaway is built on Ruby on Rails API as backend and React frontend."
         }, 
 
+        {
+            id: 5, name: "Pokemon", short: "Memory Game",
+            tech_stack: [techStack.React, techStack.Js, techStack.Html, techStack.Css, techStack.Redux, techStack.Mui],
+            site_link: "https://pokemon-theta-eosin.vercel.app/",
+            github_link: "https://github.com/kcstarless/pokemon",
+            image: imagePokemon,
+            thumb: thumbPokemon,
+            description: "React based browser game. The game tests players memory by randomly shuffling Pokemon card and asking them to click on each one only once. The game keeps track of the player's current and best score. The project demonstrates the use of React components, state management, event handling and CSS to create an interactive and engaging user experience."
+        },
     ]
 }
 

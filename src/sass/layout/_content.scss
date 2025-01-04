@@ -31,7 +31,7 @@
         animation: showContent 0.5s 1s linear 1 forwards; 
     }
 
-    .text-1, .text-2, .text-3, .text-4, .text-5 {
+    .text-1, .text-2, .text-3, .text-4, .text-5, .text-6 {
         padding-top: 10px;
         transform: translateX(150px);
         filter: blur(20px);
@@ -65,6 +65,7 @@
     .text-3 { animation-delay: 1s; }
     .text-4 { animation-delay: 1s; }
     .text-5 { animation-delay: 1s; }
+    .text-6 { animation-delay: 1s; }
     .sub-title  { animation-delay: 1.5s; }
     .portfolio-link { animation-delay: 0.5s; }
       

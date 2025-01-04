@@ -58,8 +58,26 @@ header a {
             font-size: var(--font-size-xxs);
         }
     }
-}
 
+}
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+
+    .tooltip {
+        bottom: 110%;
+        left: 30%;
+        background-color: rgb(112, 112, 112); /* Dark background */
+        color: var(--color-text-white);
+        font-size: var(--font-size-xxs);
+        font-weight: bold;
+    }
+  }
+.tooltip-container:hover .tooltip {
+    visibility: visible;
+    opacity: 1; /* Show tooltip */
+  }
+  
 @media screen and (max-width: 678px) {
     .title {
         margin-top: -10px;

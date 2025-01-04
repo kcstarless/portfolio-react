@@ -30,7 +30,14 @@ const ProjectTech = ({ tech_stack }) => {
     return (
         <div className="project-tech">
             {tech_stack.map((tech) => (
-                <img key={tech.name} src={tech.icon} className="tech-icon" title={tech.name} alt={tech.name} />
+                <div className="tech-icon-container" key={tech.name}>
+                    <img
+                        src={tech.icon}
+                        className="tech-icon"
+                        alt={tech.name}
+                    />
+                    <div className="tooltip">{tech.name}</div>
+                </div>
             ))}
         </div>
     )

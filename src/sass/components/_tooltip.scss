@@ -1,0 +1,20 @@
+.tooltip {
+    visibility: hidden; /* Hide tooltip by default */
+    position: absolute;
+    bottom: 125%; /* Position above the image */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(112, 112, 112); /* Dark background */
+    color: var(--color-text-white);
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    font-size: var(--font-size-m);
+    font-weight: bold;
+    white-space: nowrap; /* Prevent text from wrapping */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}

@@ -22,6 +22,7 @@ import iconSass from '../assets/icons/Sass.svg';
 import iconHtml from '../assets/icons/HTML5.svg';
 import iconCss from '../assets/icons/CSS3.svg';
 import iconJs from '../assets/icons/JavaScript.svg';
+import iconRedux from '../assets/icons/Redux.svg';
 
 
 //** Project file containing all the projects and it's details */
@@ -59,7 +60,7 @@ const projects = () => {
 
         {
             id: 4, name: "Pokemon", short: "Memory Game",
-            tech_stack: [iconReact, iconSass, iconJs, iconCss, iconHtml],
+            tech_stack: [iconReact, iconSass, iconJs, iconCss, iconHtml, iconRedux],
             site_link: "https://pokemon-theta-eosin.vercel.app/",
             github_link: "https://github.com/kcstarless/pokemon",
             image: imagePokemon,

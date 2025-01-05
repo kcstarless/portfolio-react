@@ -24,6 +24,7 @@ import iconCss from '../assets/icons/CSS3.svg';
 import iconJs from '../assets/icons/JavaScript.svg';
 import iconRedux from '../assets/icons/Redux.svg';
 import iconMui from '../assets/icons/Mui.svg';
+import iconFigma from '../assets/icons/Figma.svg'
 
 
 const techStack = {
@@ -38,6 +39,7 @@ const techStack = {
     Js: { icon: iconJs, name: "JavaScript" },
     Redux: { icon: iconRedux, name: "Redux" },
     Mui: { icon: iconMui, name: "Material UI" }, 
+    Figma: { icon: iconFigma, name: "Figma" }
 }
 
 
@@ -75,18 +77,18 @@ const projects = () => {
         },
 
         {
-            id: 4, name: "Flyaway", short: "Flight Search Engine",
+            id: 4, name: "Flyaway", short: "Flight Search & Booking Engine",
             tech_stack: [techStack.Ruby, techStack.Rails, techStack.React, techStack.Postgres, techStack.Sass, techStack.Js, techStack.Css, techStack.Html, techStack.Mui],
             site_link: "https://flyaway-rails-react.fly.dev/",
             github_link: "https://github.com/kcstarless/theodinbook",
             image: imageFlyaway,
             thumb: thumbFlyaway,
-            description: "Inspired by Skyscanner and Google flight search, Flyaway is a flight search engine that allows users to search for flights based on their departure and destination cities. The app uses the Amadeus API to fetch flight data and displays the results in a user-friendly format. Users can filter flights by price, airline, and departure time, and view detailed information about each flight. Flyaway is built on Ruby on Rails API as backend and React frontend."
+            description: "Inspired by Skyscanner and Google Flight Search, Flyaway is a flight search and booking app that allows users to find and book flights based on their departure and destination cities. The app utilizes the Amadeus API to fetch real-time flight data, presenting the results in a clean and user-friendly format. Users can filter flights by price, airline, and departure time, and view detailed flight information. Flyaway combines a Ruby on Rails API backend with a React frontend to deliver a seamless experience for flight search and booking."
         }, 
 
         {
             id: 5, name: "Pokemon", short: "Memory Game",
-            tech_stack: [techStack.React, techStack.Js, techStack.Html, techStack.Css, techStack.Redux, techStack.Mui],
+            tech_stack: [techStack.React, techStack.Js, techStack.Html, techStack.Css, techStack.Redux, techStack.Mui, techStack.Figma],
             site_link: "https://pokemon-theta-eosin.vercel.app/",
             github_link: "https://github.com/kcstarless/pokemon",
             image: imagePokemon,

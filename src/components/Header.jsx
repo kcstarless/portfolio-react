@@ -39,7 +39,7 @@ const Header = () => {
                             className="copy" 
                             onClick={copyEmailAddress} 
                         />
-                        <div className="tooltip">Copy email adddress</div>
+                        <div className="tooltip">Copy email address</div>
                     </div>
                 </div>
                 <span>Portfolio</span>

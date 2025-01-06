@@ -5,7 +5,6 @@ header {
     max-width: 80%;
     margin: auto;
     height: 100px;
-    // padding-top: 50px;
     display: flex;
     align-items: center;
     position: relative;
@@ -14,7 +13,6 @@ header {
 }
 
 header a {
-    // margin-right: 40px
     color: var(--color-text-white);
 }
 
@@ -35,31 +33,38 @@ header a {
 
     font-family: var(--font-family-sans);
     transform: translateY(50px);
+    -webkit-transform: translateY(50px);  // WebKit-specific transform for Safari
     filter: blur(20px);
+    -webkit-filter: blur(20px);  // WebKit-specific filter for Safari
     opacity: 0;
-    animation: showContent 0.5s 1s linear 1 forwards; 
+    animation: showContent 0.5s 1s linear 1 forwards;
+    -webkit-animation: showContent 0.5s 1s linear 1 forwards;  // WebKit-specific animation for Safari
 
     .email-link {
-        display: flex;;
+        display: flex;
         cursor: pointer;
         .email {
             filter: brightness(0.1);
+            -webkit-filter: brightness(0.1);  // WebKit-specific filter for Safari
         }
         .email:hover {
             filter: brightness(1.2);
+            -webkit-filter: brightness(1.2);  // WebKit-specific filter for Safari
         }
         .copy {
             filter: brightness(0.1);
+            -webkit-filter: brightness(0.1);  // WebKit-specific filter for Safari
         }
         .copy:hover {
             filter: brightness(1.2);
+            -webkit-filter: brightness(1.2);  // WebKit-specific filter for Safari
         }
         .copy-feedback {
             font-size: var(--font-size-xxs);
         }
     }
-
 }
+
 .tooltip-container {
     position: relative;
     display: inline-block;
@@ -70,16 +75,20 @@ header a {
         background-color: rgb(112, 112, 112); /* Dark background */
         color: var(--color-text-white);
         font-size: var(--font-size-xxs);
-        // font-weight: bold;
         padding: 5px;
+        visibility: hidden; /* Initially hidden */
+        opacity: 0;
+        -webkit-transition: opacity 0.3s ease-in-out;  // WebKit-specific transition for Safari
+        transition: opacity 0.3s ease-in-out;
     }
-  }
+}
+
 .tooltip-container:hover .tooltip {
     visibility: visible;
     opacity: 1; /* Show tooltip */
+    -webkit-opacity: 1;  // WebKit-specific opacity for Safari
 }
 
-  
 @media screen and (max-width: 678px) {
     .title {
         margin-top: -10px;

@@ -75,4 +75,11 @@
     // Text shadow
     --shadow-text: 0 5px 10px #004;
     --shadow-text-light: 1px 1px 1px #fff;
+
+    // WebKit-related styles for compatibility
+
+    // Adding some common WebKit prefixes for Safari compatibility
+    --webkit-transition: -webkit-transition 200ms ease-in-out;
+    --webkit-box-shadow: -webkit-box-shadow 0px 4px 6px rgba(0, 0, 0, 0.1);
+    --webkit-border-radius: -webkit-border-radius 5px;
 }

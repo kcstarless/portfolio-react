@@ -148,3 +148,7 @@
         width: 100%;
     }
 }
+
+* {
+    animation-timing-function: ease-in-out;  // Apply smooth animation timing to all animations
+}

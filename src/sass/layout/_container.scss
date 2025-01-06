@@ -26,9 +26,11 @@
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);  // Dark semi-transparent overlay
+    -webkit-background-color: rgba(0, 0, 0, 0.5);  // WebKit-specific background-color for Safari
     z-index: 1;  // Ensures it's above other content
     height: 100vh;
 }
+
 .darker-overlay {
     position: fixed;  // Position it above the content
     top: 0;
@@ -36,6 +38,6 @@
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.8);  // Dark semi-transparent overlay
+    -webkit-background-color: rgba(0, 0, 0, 0.8);  // WebKit-specific background-color for Safari
     z-index: 1;  // Ensures it's above other content
 }
-

@@ -1,7 +1,6 @@
 @use '../mixins' as *;
 
-
-.intro-page { 
+.intro-page {
     width: 1024px;
     max-width: 80%;
     margin: 0 auto;
@@ -18,15 +17,20 @@
         padding-top: 100px;
         font-size: var(--font-size-xxxxxl);
         transform: translateY(50px);
+        -webkit-transform: translateY(50px);  // WebKit prefix
         filter: blur(20px);
+        -webkit-filter: blur(20px);  // WebKit prefix
         opacity: 0;
         animation: showContent 0.5s 1s linear 1 forwards; 
     }
+
     .sub-title {
         padding-top: 30px;
         font-size: var(--font-size-l);
         transform: translateY(50px);
+        -webkit-transform: translateY(50px);  // WebKit prefix
         filter: blur(20px);
+        -webkit-filter: blur(20px);  // WebKit prefix
         opacity: 0;
         animation: showContent 0.5s 1s linear 1 forwards; 
     }
@@ -34,7 +38,9 @@
     .text-1, .text-2, .text-3, .text-4, .text-5, .text-6 {
         padding-top: 10px;
         transform: translateX(150px);
+        -webkit-transform: translateX(150px);  // WebKit prefix
         filter: blur(20px);
+        -webkit-filter: blur(20px);  // WebKit prefix
         opacity: 0;
         animation: showContent 0.5s 1s linear 1 forwards; 
     }
@@ -46,6 +52,7 @@
         cursor: pointer;
         font-size: var(--font-size-xl);
         background: linear-gradient(to bottom, var(--color-primary-rotate), var(--color-primary));
+        -webkit-background: linear-gradient(to bottom, var(--color-primary-rotate), var(--color-primary));  // WebKit prefix
         color: var(--color-white);
         padding-left: 10px;
         padding-right: 10px;
@@ -54,7 +61,9 @@
         border: none;
         font-family: var(--font-family-sans);
         transform: translateY(50px);
+        -webkit-transform: translateY(50px);  // WebKit prefix
         filter: blur(20px);
+        -webkit-filter: blur(20px);  // WebKit prefix
         opacity: 0;
         animation: showContent 0.5s 1s linear 1 forwards; 
     }
@@ -68,7 +77,7 @@
     .text-6 { animation-delay: 1s; }
     .sub-title  { animation-delay: 1.5s; }
     .portfolio-link { animation-delay: 0.5s; }
-      
+
     @keyframes timeRunning {
         to {
             width: 100%;
@@ -80,9 +89,11 @@
     width: 0%;
     height: 5px;
     background-color: var(--color-primary);
+    -webkit-background-color: var(--color-primary);  // WebKit prefix
     position: fixed;
     z-index: 100;
     top: 0;
     left: 0;
     animation: timeRunning 5s linear 1 forwards;
+    -webkit-animation: timeRunning 5s linear 1 forwards;  // WebKit prefix for animation
 }

@@ -77,7 +77,7 @@ const projects = () => {
         },
 
         {
-            id: 4, name: "Flyaway", short: "Flight Search & Booking Engine",
+            id: 4, name: "Flyaway", short: "Flight Booking Engine",
             tech_stack: [techStack.Ruby, techStack.Rails, techStack.React, techStack.Postgres, techStack.Sass, techStack.Js, techStack.Css, techStack.Html, techStack.Mui],
             site_link: "https://flyaway-rails-react.fly.dev/",
             github_link: "https://github.com/kcstarless/theodinbook",
@@ -88,7 +88,7 @@ const projects = () => {
 
         {
             id: 5, name: "Pokemon", short: "Memory Game",
-            tech_stack: [techStack.React, techStack.Js, techStack.Html, techStack.Css, techStack.Redux, techStack.Mui, techStack.Figma],
+            tech_stack: [techStack.React, techStack.Js, techStack.Html, techStack.Css, techStack.Sass, techStack.Redux, techStack.Mui, techStack.Figma],
             site_link: "https://pokemon-theta-eosin.vercel.app/",
             github_link: "https://github.com/kcstarless/pokemon",
             image: imagePokemon,

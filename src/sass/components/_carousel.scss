@@ -15,7 +15,8 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        filter: brightness(0.15);  
+        -webkit-filter: brightness(0.15);  // WebKit filter for Safari
+        filter: brightness(0.15);
     }
     .content {
         position: absolute;
@@ -26,7 +27,6 @@
         transform: translateX(-50%);
         box-sizing: border-box;
         
-    
         .project-id {
             font-size: var(--font-size-xxl);
             // color: var(--color-secondary);
@@ -62,13 +62,15 @@
                 .tech-icon {
                     width: 30px;
                     height: 30px;
+                    -webkit-filter: brightness(1.2); // WebKit filter for Safari
                     filter: brightness(1.2);
                 }
             }
+
             .tech-icon-container:hover .tooltip {
                 visibility: visible;
                 opacity: 1; /* Show tooltip */
-              }
+            }
         }
     
         .links {
@@ -122,12 +124,13 @@
         transition: .5s;
         z-index: 100;
         cursor: pointer;
+        -webkit-transition: .5s; /* WebKit transition for Safari */
     }
     
     button:hover {
         border-radius: var(--border-round);
         background: linear-gradient(to bottom, var(--color-primary-rotate), var(--color-primary));
-        color: var(--color-white    );
+        color: var(--color-white);
     }
 }
 
@@ -144,6 +147,7 @@
         filter: blur(20px);
         opacity: 0;
         animation: showContent 0.5s 1s linear 1 forwards; 
+        -webkit-animation: showContent 0.5s 1s linear 1 forwards;  /* WebKit animation */
     }  
 
     .project-id { animation-delay: 0.7s; }
@@ -151,9 +155,7 @@
     .project-description { animation-delay: 1.3s; } 
     .project-tech { animation-delay: 1.3s; }
     .links { animation-delay: 1.5s; }
-
 }
-
 
 /** Click next button effect */
 // Appears the image is expanding from the thumbnail to whole screen
@@ -166,6 +168,7 @@
         bottom: 50px;
         border-radius: var(--border-radius);
         animation: showImage 0.5s linear 1 forwards;
+        -webkit-animation: showImage 0.5s linear 1 forwards; /* WebKit animation */
     }
 }
 /** Effect for previous button */
@@ -177,10 +180,12 @@
         bottom: 0;
         left: 0;
         animation: outImage 0.5s linear 1 forwards;
+        -webkit-animation: outImage 0.5s linear 1 forwards; /* WebKit animation */
     }
 
     .links, .project-tech, .project-description, .project-name, .project-id {
         animation: contentOut 0.5s 0.5s linear 1 forwards;
+        -webkit-animation: contentOut 0.5s 0.5s linear 1 forwards; /* WebKit animation */
     }
     
 }
@@ -200,17 +205,16 @@
     z-index: 100;
     top: 0;
     left: 0;
-
 }
 
-.carousel.next .time ,
+.carousel.next .time,
 .carousel.prev .time {
     width: 0;
     animation: timeRunning 2s linear 1 forwards;
+    -webkit-animation: timeRunning 2s linear 1 forwards; /* WebKit animation */
 }
 
-
-// Media query
+/* Media query */
 @media screen and (max-width: 678px) {
     .carousel .list .item .content {
         padding-right: 0;

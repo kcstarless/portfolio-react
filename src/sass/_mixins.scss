@@ -24,16 +24,30 @@
     }
 }
 
-
+// Keyframes for animations with WebKit prefixes for Safari compatibility
 @keyframes showContent {
     to {
         transform: translateY(0);
         filter: blur(0);
         opacity: 1;
     }
-}    
+}
+
+@-webkit-keyframes showContent {
+    to {
+        transform: translateY(0);
+        -webkit-filter: blur(0);  // WebKit-specific filter for Safari
+        opacity: 1;
+    }
+}
 
 @keyframes transformThumbnail {
+    to {
+        transform: translateX(0);
+    }
+}
+
+@-webkit-keyframes transformThumbnail {
     to {
         transform: translateX(0);
     }
@@ -53,7 +67,27 @@
     }
 }
 
+@-webkit-keyframes showImage {
+    from {
+        -webkit-filter: brightness(1);  // WebKit-specific filter for Safari
+    }
+    to {
+        -webkit-filter: brightness(0.15); // WebKit-specific filter for Safari
+        width: 100%;
+        height: 100%;
+        left: 0;
+        bottom: 0;
+        border-radius: 0;
+    }
+}
+
 @keyframes showThumbnail {
+    to {
+        width: 300px;
+    }
+}
+
+@-webkit-keyframes showThumbnail {
     to {
         width: 300px;
     }
@@ -73,6 +107,20 @@
     }
 }
 
+@-webkit-keyframes outImage {
+    from {
+        -webkit-filter: brightness(0.2);  // WebKit-specific filter for Safari
+    }
+    to {
+        -webkit-filter: brightness(1);    // WebKit-specific filter for Safari
+        width: 300px;
+        height: 200px;
+        border-radius: var(--border-radius);
+        left: 50%;
+        bottom: 50px;
+    }
+}
+
 @keyframes contentOut {
     to {
         transform: translateY(150px);
@@ -81,7 +129,21 @@
     }
 }
 
+@-webkit-keyframes contentOut {
+    to {
+        transform: translateY(150px);
+        -webkit-filter: blur(20px);  // WebKit-specific filter for Safari
+        opacity: 0;
+    }
+}
+
 @keyframes timeRunning {
+    to {
+        width: 100%;
+    }
+}
+
+@-webkit-keyframes timeRunning {
     to {
         width: 100%;
     }

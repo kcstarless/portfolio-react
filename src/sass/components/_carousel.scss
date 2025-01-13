@@ -18,6 +18,7 @@
         -webkit-filter: brightness(0.15);  // WebKit filter for Safari
         filter: brightness(0.15);
     }
+    
     .content {
         position: absolute;
         top: 20%;
@@ -26,7 +27,7 @@
         left: 50%;
         transform: translateX(-50%);
         box-sizing: border-box;
-        
+
         .project-id {
             font-size: var(--font-size-xxl);
             // color: var(--color-secondary);

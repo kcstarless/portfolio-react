@@ -1,21 +1,24 @@
 @use '../mixins' as *;
 
 .intro-page {
-    width: 1024px;
-    max-width: 80%;
+    width: 100vw;
+    // max-width: 80%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: center;
     justify-content: center;
     font-size: var(--font-size-s);
     font-family: var(--font-family-lexend);
     animation: showContent 1s ease-in-out;
-    height: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 900;
+    background-color: black;
 
     .name {
         font-family: var(--font-family-sans);
-        padding-top: 100px;
+        // padding-top: 100px;
         font-size: var(--font-size-xxxxxl);
         transform: translateY(50px);
         -webkit-transform: translateY(50px);  // WebKit prefix
@@ -92,7 +95,7 @@
     background-color: var(--color-primary);
     -webkit-background-color: var(--color-primary);  // WebKit prefix
     position: fixed;
-    z-index: 100;
+    z-index: 999;
     top: 0;
     left: 0;
     animation: timeRunning 5s linear 1 forwards;

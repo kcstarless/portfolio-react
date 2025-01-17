@@ -1,12 +1,17 @@
-import { useRef } from 'react';
-
+import { useRef, useEffect } from 'react';
 import CarouselActive from './CarouselActive.jsx';
 import CarouselThumbnail from './CarouselThumbnail.jsx';
 
-const Portfolio = () => {
+const Portfolio = ({ setPortfolioLoading }) => {
     const carouselRef = useRef(null);
     const sliderRef = useRef(null);
     const thumbnailRef = useRef(null);
+
+    // Image loading and state update
+    useEffect(() => {
+        // Pass the setPortfolioLoading to CarouselActive to control loading state
+        setPortfolioLoading(true);
+    }, [setPortfolioLoading]);
 
     const handleNextClick = () => {
         const sliderItems = sliderRef.current.querySelectorAll('.item');
@@ -36,7 +41,7 @@ const Portfolio = () => {
 
     return (
         <div className="carousel" ref={carouselRef}>
-            <CarouselActive sliderRef={sliderRef} />
+            <CarouselActive setPortfolioLoading={setPortfolioLoading} sliderRef={sliderRef} />
             <CarouselThumbnail thumbnailRef={thumbnailRef} />
             <div className="arrow">
                 <button id="prev" className="prev" onClick={handlePrevClick}>&#x25BE;</button>

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import projects from '../helper/projects.js';
 
-const CarouselActive = ({ sliderRef }) => {
+const CarouselActive = ({ sliderRef, setPortfolioLoading }) => {
     const projectList = projects().reverse();
-    const totalImages = projectList.length;
+
+    // Track how many images have been loaded
     const [loadedImagesCount, setLoadedImagesCount] = useState(0);
-    const [allImagesLoaded, setAllImagesLoaded] = useState(false);
 
     // Preload images and track if they are all loaded
     const preloadImages = () => {
@@ -15,12 +15,12 @@ const CarouselActive = ({ sliderRef }) => {
                 img.src = project.image;
 
                 img.onload = () => {
-                    setLoadedImagesCount(prevCount => prevCount + 1);
+                    setLoadedImagesCount((prevCount) => prevCount + 1);
                     resolve();
                 };
 
-                img.onerror = (error) => {
-                    setLoadedImagesCount(prevCount => prevCount + 1);
+                img.onerror = () => {
+                    setLoadedImagesCount((prevCount) => prevCount + 1);
                     reject(`Error loading image: ${project.image}`);
                 };
             });
@@ -29,47 +29,43 @@ const CarouselActive = ({ sliderRef }) => {
         // Wait for all image promises to resolve or reject
         Promise.all(imagePromises)
             .then(() => {
-                setAllImagesLoaded(true);
                 console.log("All images have been loaded successfully.");
+                setPortfolioLoading(false);  // Notify Portfolio that images are fully loaded
             })
             .catch((error) => {
                 console.error("Some images failed to load.", error);
-                setAllImagesLoaded(true); // Consider all images loaded after completion
+                setPortfolioLoading(false);  // Consider the portfolio ready even if some images failed
             });
     };
 
     useEffect(() => {
-        preloadImages();
+        preloadImages();  // Trigger image preload on component mount
     }, []); // Runs only once on component mount
 
     return (
         <>
             {/* Show loading state until all images are fully loaded */}
-            {!allImagesLoaded ? (
-                <div className="loading-placeholder">Loading...</div>
-            ) : (
-                <div className="list" ref={sliderRef}>
-                    {projectList.map((project) => (
-                        <div className="item" key={project.id}>
-                            <img
-                                src={project.image}
-                                className="project-image"
-                                alt={project.name}
-                            />
-                            <div className="content">
-                                <div className="project-id">0{project.id} - {project.short}</div>
-                                <div className="project-name">{project.name}</div>
-                                <div className="project-description">{project.description}</div>
-                                <ProjectTech tech_stack={project.tech_stack} />
-                                <div className="links">
-                                    <a href={project.site_link} target="_blank" className="project-link">Demo</a>
-                                    <a href={project.github_link} target="_blank" className="project-link">Github</a>
-                                </div>
+            <div className="list" ref={sliderRef}>
+                {projectList.map((project) => (
+                    <div className="item" key={project.id}>
+                        <img
+                            src={project.image}
+                            className="project-image"
+                            alt={project.name}
+                        />
+                        <div className="content">
+                            <div className="project-id">0{project.id} - {project.short}</div>
+                            <div className="project-name">{project.name}</div>
+                            <div className="project-description">{project.description}</div>
+                            <ProjectTech tech_stack={project.tech_stack} />
+                            <div className="links">
+                                <a href={project.site_link} target="_blank" className="project-link">Demo</a>
+                                <a href={project.github_link} target="_blank" className="project-link">Github</a>
                             </div>
                         </div>
-                    ))}
-                </div>
-            )}
+                    </div>
+                ))}
+            </div>
         </>
     );
 };

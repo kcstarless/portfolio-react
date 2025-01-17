@@ -15,7 +15,7 @@ const Content = () => {
                 : (
                     <>
                         {/* If portfolio is still loading, show loading state */}
-                        {portfolioLoading && <div className="loading-placeholder">Loading Portfolio...</div>}
+                        {portfolioLoading && <IntroPage />}
                         
                         <Header />
                         <Portfolio setPortfolioLoading={setPortfolioLoading} />

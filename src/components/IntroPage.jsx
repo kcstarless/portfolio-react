@@ -8,7 +8,7 @@ const IntroPage = ({setFirstLoad}) => {
         setTimeout(() => {
             setLoading(false);
             setFirstLoad(false);
-        }, 5000);
+        }, 6000);
     },[]);
 
     return (

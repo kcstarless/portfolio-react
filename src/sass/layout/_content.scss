@@ -10,15 +10,16 @@
     justify-content: center;
     font-size: var(--font-size-s);
     font-family: var(--font-family-lexend);
-    animation: showContent 1s ease-in-out;
+    animation: showContent 2s ease-in-out;
     height: 100vh;
     position: absolute;
     z-index: 900;
     background-color: black;
+    padding-top: -300px;
 
     .name {
         font-family: var(--font-family-sans);
-        // padding-top: 100px;
+        // padding-top: -500px;
         font-size: var(--font-size-xxxxxl);
         transform: translateY(50px);
         -webkit-transform: translateY(50px);  // WebKit prefix

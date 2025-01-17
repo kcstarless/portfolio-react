@@ -3,10 +3,6 @@ import Header from './Header';
 import Portfolio from './Portfolio';
 import IntroPage from './IntroPage';
 
-const LoadingScreen = () => {
-    return (<div className="loading-screen"></div>)
-}
-
 //** Content Component */
 const Content = () => {
     const [firstLoad, setFirstLoad] = useState(true);

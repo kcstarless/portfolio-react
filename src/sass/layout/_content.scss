@@ -6,10 +6,12 @@
     /* Curtain effect */
     @keyframes slideUpCurtain {
         0% {
+            opacity: 1;
             height: 100vh;  /* Full height of the viewport initially */
             transform: translateY(0);  /* Position at the bottom */
         }
         100% {
+            opacity: 0.4;
             // height: 0;  /* Reduce height to 0 */
             transform: translateY(-100%);  /* Slide it up out of the viewport */
         }
@@ -30,13 +32,13 @@
     height: 100vh;
     position: absolute;
     z-index: 900;
-    background-color: black;
+    background-image: linear-gradient(to right, rgb(185, 102, 102), rgb(182, 147, 108));
     animation: fadeIn 3s ease-in-out forwards;
     
     .name {
         font-family: var(--font-family-sans);
         // padding-top: -500px;
-        font-size: var(--font-size-xxxxxl);
+        font-size: var(--font-size-xxxl);
         transform: translateY(50px);
         -webkit-transform: translateY(50px);  // WebKit prefix
         filter: blur(20px);
@@ -63,6 +65,8 @@
         filter: blur(20px);
         -webkit-filter: blur(20px);  // WebKit prefix
         opacity: 0;
+        color: var(--color-text-header);
+        font-weight: bold;
         animation: showContent 0.5s 1s linear 1 forwards; 
     }
 

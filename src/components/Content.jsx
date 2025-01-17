@@ -14,18 +14,13 @@ const Content = () => {
 
     return (
         <div className="container">
-            {firstLoad 
-                ? <IntroPage setFirstLoad={setFirstLoad}/> 
-                : (
+      
                     <>
-                        {/* If portfolio is still loading, show loading state */}
-                        {portfolioLoading && <LoadingScreen />}
+                        {(portfolioLoading || firstLoad)  && <IntroPage setFirstLoad={setFirstLoad} /> }
                         
                         <Header />
                         <Portfolio setPortfolioLoading={setPortfolioLoading} />
                     </>
-                )
-            }
         </div>
     );
 }

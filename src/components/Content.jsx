@@ -3,6 +3,10 @@ import Header from './Header';
 import Portfolio from './Portfolio';
 import IntroPage from './IntroPage';
 
+const LoadingScreen = () => {
+    return (<div className="loading-screen"></div>)
+}
+
 //** Content Component */
 const Content = () => {
     const [firstLoad, setFirstLoad] = useState(true);
@@ -15,7 +19,7 @@ const Content = () => {
                 : (
                     <>
                         {/* If portfolio is still loading, show loading state */}
-                        {portfolioLoading && <IntroPage />}
+                        {portfolioLoading && <LoadingScreen />}
                         
                         <Header />
                         <Portfolio setPortfolioLoading={setPortfolioLoading} />

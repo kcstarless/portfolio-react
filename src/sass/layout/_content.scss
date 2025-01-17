@@ -1,8 +1,24 @@
 @use '../mixins' as *;
 
+.intro-page.slide {
+    
+    animation: slideUpCurtain 3s ease-in-out forwards; 
+    /* Curtain effect */
+    @keyframes slideUpCurtain {
+        0% {
+            height: 100vh;  /* Full height of the viewport initially */
+            transform: translateY(0);  /* Position at the bottom */
+        }
+        100% {
+            // height: 0;  /* Reduce height to 0 */
+            transform: translateY(-100%);  /* Slide it up out of the viewport */
+        }
+    }
+
+}
+
 .intro-page {
     width: 100vw;
-    // max-width: 80%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -15,8 +31,8 @@
     position: absolute;
     z-index: 900;
     background-color: black;
-    padding-top: -300px;
-
+    animation: fadeIn 3s ease-in-out forwards;
+    
     .name {
         font-family: var(--font-family-sans);
         // padding-top: -500px;
@@ -83,6 +99,7 @@
     .sub-title  { animation-delay: 1.5s; }
     .portfolio-link { animation-delay: 0.5s; }
 
+
     @keyframes timeRunning {
         to {
             width: 100%;
@@ -101,13 +118,4 @@
     left: 0;
     animation: timeRunning 5s linear 1 forwards;
     -webkit-animation: timeRunning 5s linear 1 forwards;  // WebKit prefix for animation
-}
-
-
-.loading-screen {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    background-color: black;
-    z-index: 999;
 }

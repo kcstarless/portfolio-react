@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const IntroPage = ({setFirstLoad}) => {
+const IntroPage = ({setFirstLoad, slide}) => {
 
     const [loading, setLoading] = useState(true);
 
@@ -13,7 +13,7 @@ const IntroPage = ({setFirstLoad}) => {
 
     return (
         <>
-        <div className="intro-page">
+        <div className={`intro-page ${slide ? 'slide' : ''}`}>
             {/* <button className="portfolio-link">Portfolio</button> */}
             <div className="name">Hi, I'm <span className="highlight">David</span></div>
             <div className="text-1"><p>I am passionate about learning</p></div>

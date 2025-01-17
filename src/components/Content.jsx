@@ -13,7 +13,7 @@ const Content = () => {
       
                     <>
                         {(portfolioLoading || firstLoad)  && <IntroPage setFirstLoad={setFirstLoad} /> }
-                        
+                        {(!portfolioLoading && !firstLoad) && <div className="intro-page slide"></div>}
                         <Header />
                         <Portfolio setPortfolioLoading={setPortfolioLoading} />
                     </>

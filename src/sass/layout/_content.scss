@@ -2,7 +2,7 @@
 
 .intro-page.slide {
     
-    animation: slideUpCurtain 3s ease-in-out forwards; 
+    animation: slideUpCurtain 2s ease-in-out forwards; 
     /* Curtain effect */
     @keyframes slideUpCurtain {
         0% {
@@ -11,7 +11,7 @@
             transform: translateY(0);  /* Position at the bottom */
         }
         100% {
-            opacity: 0.2;
+            // opacity: 0.2;
             // height: 0;  /* Reduce height to 0 */
             transform: translateY(-100%);  /* Slide it up out of the viewport */
         }

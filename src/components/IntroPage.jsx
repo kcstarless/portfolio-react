@@ -19,8 +19,7 @@ const IntroPage = ({setFirstLoad, slide}) => {
             <div className="text-1"><p>I am passionate about learning</p></div>
             <div className="text-2"><p>I like to build things</p></div>
             <div className="text-3"><p>I like to solve problems</p></div>
-            <div className="text-5"><p>I like to make things work</p></div>
-            <div className="text-6"><p>I seek mentorship</p></div>
+            <div className="text-5"><p>I like making a difference & contribute</p></div>
             <div className="sub-title">Full-Stack Web Developer</div>
             
         </div>

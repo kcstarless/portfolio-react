@@ -4,6 +4,7 @@ import imageOdinbook from '../assets/project_images/odinbook.png';
 import imageBattleship from '../assets/project_images/battleship.png';
 import imageFlyaway from '../assets/project_images/flyaway.png';
 import imagePokemon from '../assets/project_images/pokemon.png';
+import imageGimdev from '../assets/project_images/gimdev.png';
 
 // Thumb images
 import thumbFlyaway from '../assets/project_images/flyaway_thumb.png';
@@ -11,6 +12,7 @@ import thumbOdinbook from '../assets/project_images/odinbook_thumb.png';
 import thumbUmbrella from '../assets/project_images/umbrella_thumb.png';
 import thumbBattleship from '../assets/project_images/battleship_thumb.png';
 import thumbPokemon from '../assets/project_images/pokemon_thumb.png';
+import thumbGimdev from '../assets/project_images/gimdev_thumb.png';
 
 // Tech icons
 import iconReact from '../assets/icons/React.svg';
@@ -24,7 +26,8 @@ import iconCss from '../assets/icons/CSS3.svg';
 import iconJs from '../assets/icons/JavaScript.svg';
 import iconRedux from '../assets/icons/Redux.svg';
 import iconMui from '../assets/icons/Mui.svg';
-import iconFigma from '../assets/icons/Figma.svg'
+import iconFigma from '../assets/icons/Figma.svg';
+import iconThreejs from '../assets/icons/threejs.svg';
 
 
 const techStack = {
@@ -39,7 +42,8 @@ const techStack = {
     Js: { icon: iconJs, name: "JavaScript" },
     Redux: { icon: iconRedux, name: "Redux" },
     Mui: { icon: iconMui, name: "Material UI" }, 
-    Figma: { icon: iconFigma, name: "Figma" }
+    Figma: { icon: iconFigma, name: "Figma" },
+    Three: { icon: iconThreejs, name: "Three.js"},
 }
 
 
@@ -94,6 +98,16 @@ const projects = () => {
             image: imagePokemon,
             thumb: thumbPokemon,
             description: "React based browser game. The game tests players memory by randomly shuffling Pokemon card and asking them to click on each one only once. The game keeps track of the player's current and best score. The project demonstrates the use of React components, state management, event handling and CSS to create an interactive and engaging user experience."
+        },
+
+        {
+            id: 6, name: "Gim Web Dev", short: "Web dev blog app",
+            tech_stack: [techStack.Html, techStack.Css, techStack.Sass, techStack.Rails, techStack.Ruby,  techStack.Postgres, techStack.Figma, techStack.Three, techStack.Webpack],
+            site_link: "https://gimdev-lingering-sun-6640.fly.dev/",
+            github_link: "https://github.com/kcstarless/gimdev",
+            image: imageGimdev,
+            thumb: thumbGimdev,
+            description: "My personal web development blog is built using Rails, Hotwire, Stimulus, and Three.js, providing a dynamic, interactive platform where users can create, update, and delete posts. The site features authentication, ensuring that only authorized users can manage their content. I specifically wanted to experiment with Three.js for 3D rendering on the web, adding an immersive visual element to the blog. This project not only allows me to share my thoughts and experiences but also helps me track my progress in learning web development, especially with new technologies like Three.js."
         },
     ]
 }

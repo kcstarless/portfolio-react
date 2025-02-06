@@ -1,125 +1,154 @@
-@use '../mixins' as *;
+@use "../mixins" as *;
 
 .intro-page.slide {
-    
-    animation: slideUpCurtain 2s ease-in-out forwards; 
-    /* Curtain effect */
-    @keyframes slideUpCurtain {
-        0% {
-            opacity: 1;
-            height: 100vh;  /* Full height of the viewport initially */
-            transform: translateY(0);  /* Position at the bottom */
-        }
-        100% {
-            // opacity: 0.2;
-            // height: 0;  /* Reduce height to 0 */
-            transform: translateY(-100%);  /* Slide it up out of the viewport */
-        }
+  animation: slideUpCurtain 2s ease-in-out forwards;
+  /* Curtain effect */
+  @keyframes slideUpCurtain {
+    0% {
+      opacity: 1;
+      height: 100vh; /* Full height of the viewport initially */
+      //   transform: translateY(0); /* Position at the bottom */
     }
-
+    100% {
+      opacity: 0;
+      // height: 0;  /* Reduce height to 0 */
+      //   transform: translateY(-100%); /* Slide it up out of the viewport */
+      z-index: -100;
+    }
+  }
 }
 
 .intro-page {
-    width: 100vw;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: var(--font-size-s);
-    font-family: var(--font-family-lexend);
-    animation: showContent 2s ease-in-out;
-    height: 100vh;
-    position: absolute;
-    z-index: 900;
-    background-image: linear-gradient(#e66465, #9198e5);
-    animation: fadeIn 3s ease-in-out forwards;
-    
-    .name {
-        font-family: var(--font-family-sans);
-        // padding-top: -500px;
-        font-size: var(--font-size-xxxl);
-        transform: translateY(50px);
-        -webkit-transform: translateY(50px);  // WebKit prefix
-        filter: blur(20px);
-        -webkit-filter: blur(20px);  // WebKit prefix
-        opacity: 0;
-        animation: showContent 0.5s 1s linear 1 forwards; 
+  width: 100vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-s);
+  font-family: var(--font-family-lexend);
+  animation: showContent 2s ease-in-out;
+  height: 100vh;
+  position: absolute;
+  z-index: 900;
+  background-image: linear-gradient(#e66465, #9198e5);
+  animation: fadeIn 3s ease-in-out forwards;
+
+  .name {
+    font-family: var(--font-family-sans);
+    // padding-top: -500px;
+    font-size: var(--font-size-xxxl);
+    transform: translateY(50px);
+    -webkit-transform: translateY(50px); // WebKit prefix
+    filter: blur(20px);
+    -webkit-filter: blur(20px); // WebKit prefix
+    opacity: 0;
+    animation: showContent 0.5s 1s linear 1 forwards;
+  }
+
+  .sub-title {
+    padding-top: 30px;
+    font-size: var(--font-size-l);
+    transform: translateY(50px);
+    -webkit-transform: translateY(50px); // WebKit prefix
+    filter: blur(20px);
+    -webkit-filter: blur(20px); // WebKit prefix
+    opacity: 0;
+    animation: showContent 0.5s 1s linear 1 forwards;
+  }
+
+  .text-1,
+  .text-2,
+  .text-3,
+  .text-4,
+  .text-5,
+  .text-6 {
+    padding-top: 10px;
+    transform: translateX(150px);
+    -webkit-transform: translateX(150px); // WebKit prefix
+    filter: blur(20px);
+    -webkit-filter: blur(20px); // WebKit prefix
+    opacity: 0;
+    color: var(--color-text-header);
+    font-weight: bold;
+    animation: showContent 0.5s 1s linear 1 forwards;
+  }
+
+  .portfolio-link {
+    display: inline-flex;
+    align-items: end;
+    margin-top: 30px;
+    cursor: pointer;
+    font-size: var(--font-size-xl);
+    background: linear-gradient(
+      to bottom,
+      var(--color-primary-rotate),
+      var(--color-primary)
+    );
+    -webkit-background: linear-gradient(
+      to bottom,
+      var(--color-primary-rotate),
+      var(--color-primary)
+    ); // WebKit prefix
+    color: var(--color-white);
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: var(--border-radius);
+    height: 80px;
+    border: none;
+    font-family: var(--font-family-sans);
+    transform: translateY(50px);
+    -webkit-transform: translateY(50px); // WebKit prefix
+    filter: blur(20px);
+    -webkit-filter: blur(20px); // WebKit prefix
+    opacity: 0;
+    animation: showContent 0.5s 1s linear 1 forwards;
+  }
+
+  .name {
+    animation-delay: 0.7s;
+  }
+  .text-1 {
+    animation-delay: 1s;
+  }
+  .text-2 {
+    animation-delay: 1s;
+  }
+  .text-3 {
+    animation-delay: 1s;
+  }
+  .text-4 {
+    animation-delay: 1s;
+  }
+  .text-5 {
+    animation-delay: 1s;
+  }
+  .text-6 {
+    animation-delay: 1s;
+  }
+  .sub-title {
+    animation-delay: 1.5s;
+  }
+  .portfolio-link {
+    animation-delay: 0.5s;
+  }
+
+  @keyframes timeRunning {
+    to {
+      width: 100%;
     }
-
-    .sub-title {
-        padding-top: 30px;
-        font-size: var(--font-size-l);
-        transform: translateY(50px);
-        -webkit-transform: translateY(50px);  // WebKit prefix
-        filter: blur(20px);
-        -webkit-filter: blur(20px);  // WebKit prefix
-        opacity: 0;
-        animation: showContent 0.5s 1s linear 1 forwards; 
-    }
-
-    .text-1, .text-2, .text-3, .text-4, .text-5, .text-6 {
-        padding-top: 10px;
-        transform: translateX(150px);
-        -webkit-transform: translateX(150px);  // WebKit prefix
-        filter: blur(20px);
-        -webkit-filter: blur(20px);  // WebKit prefix
-        opacity: 0;
-        color: var(--color-text-header);
-        font-weight: bold;
-        animation: showContent 0.5s 1s linear 1 forwards; 
-    }
-
-    .portfolio-link {
-        display: inline-flex;
-        align-items: end;
-        margin-top: 30px;
-        cursor: pointer;
-        font-size: var(--font-size-xl);
-        background: linear-gradient(to bottom, var(--color-primary-rotate), var(--color-primary));
-        -webkit-background: linear-gradient(to bottom, var(--color-primary-rotate), var(--color-primary));  // WebKit prefix
-        color: var(--color-white);
-        padding-left: 10px;
-        padding-right: 10px;
-        border-radius: var(--border-radius);
-        height: 80px;
-        border: none;
-        font-family: var(--font-family-sans);
-        transform: translateY(50px);
-        -webkit-transform: translateY(50px);  // WebKit prefix
-        filter: blur(20px);
-        -webkit-filter: blur(20px);  // WebKit prefix
-        opacity: 0;
-        animation: showContent 0.5s 1s linear 1 forwards; 
-    }
-
-    .name { animation-delay: 0.7s; }
-    .text-1 { animation-delay: 1s; } 
-    .text-2 { animation-delay: 1s; }
-    .text-3 { animation-delay: 1s; }
-    .text-4 { animation-delay: 1s; }
-    .text-5 { animation-delay: 1s; }
-    .text-6 { animation-delay: 1s; }
-    .sub-title  { animation-delay: 1.5s; }
-    .portfolio-link { animation-delay: 0.5s; }
-
-
-    @keyframes timeRunning {
-        to {
-            width: 100%;
-        }
-    }
+  }
 }
 
 .loader {
-    width: 0%;
-    height: 5px;
-    background-color: var(--color-primary);
-    -webkit-background-color: var(--color-primary);  // WebKit prefix
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    left: 0;
-    animation: timeRunning 5s linear 1 forwards;
-    -webkit-animation: timeRunning 5s linear 1 forwards;  // WebKit prefix for animation
+  width: 0%;
+  height: 5px;
+  background-color: var(--color-primary);
+  -webkit-background-color: var(--color-primary); // WebKit prefix
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  animation: timeRunning 5s linear 1 forwards;
+  -webkit-animation: timeRunning 5s linear 1 forwards; // WebKit prefix for animation
 }

@@ -1,43 +1,53 @@
-@use '../mixins' as *;
+@use "../mixins" as *;
 
 .container {
-    height: 100vh;
-    // @include media(desktop) {
-    //     width: 100%;
-    //     // max-width: 1024px;
-    //     margin: 0 auto;
-    // }
-    // @include media(tablet) {
-    //     width: 100%;
-    //     // max-width: 768px;
-    //     margin: 0 auto;
-    // }
-    // @include media(mobile) {
-    //     width: 100%;
-    //     // max-width: 100%;
-    //     margin: 0 auto;
-    // }
+  height: 100vh;
+  // @include media(desktop) {
+  //     width: 100%;
+  //     // max-width: 1024px;
+  //     margin: 0 auto;
+  // }
+  // @include media(tablet) {
+  //     width: 100%;
+  //     // max-width: 768px;
+  //     margin: 0 auto;
+  // }
+  // @include media(mobile) {
+  //     width: 100%;
+  //     // max-width: 100%;
+  //     margin: 0 auto;
+  // }
 }
 
 .dark-overlay {
-    position: fixed;  // Position it above the content
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);  // Dark semi-transparent overlay
-    -webkit-background-color: rgba(0, 0, 0, 0.5);  // WebKit-specific background-color for Safari
-    z-index: 1;  // Ensures it's above other content
-    height: 100vh;
+  position: fixed; // Position it above the content
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); // Dark semi-transparent overlay
+  -webkit-background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); // WebKit-specific background-color for Safari
+  z-index: 1; // Ensures it's above other content
+  height: 100vh;
 }
 
 .darker-overlay {
-    position: fixed;  // Position it above the content
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.8);  // Dark semi-transparent overlay
-    -webkit-background-color: rgba(0, 0, 0, 0.8);  // WebKit-specific background-color for Safari
-    z-index: 1;  // Ensures it's above other content
+  position: fixed; // Position it above the content
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8); // Dark semi-transparent overlay
+  -webkit-background-color: rgba(
+    0,
+    0,
+    0,
+    0.8
+  ); // WebKit-specific background-color for Safari
+  z-index: 1; // Ensures it's above other content
 }

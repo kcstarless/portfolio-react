@@ -1,2 +1,9 @@
-@use '../mixins' as *;
+@use "../mixins" as *;
 
+.letter {
+  display: inline-block; /* Ensures that letters stay inline horizontally */
+  font-family: "Space Grotesk";
+  // padding-top: -500px;
+  font-size: var(--font-size-xxxl);
+  margin: 0 2px;
+}
